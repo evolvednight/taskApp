@@ -4,8 +4,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
-  {path: '', component: TasksComponent },
-  {path: 'summary', component: SummaryComponent },
+  {path: '', component: TasksComponent, data: { animation: 'Task'} },
+  {path: 'summary', component: SummaryComponent, data: { animation: "Summary"} },
 ];
 
 @NgModule({
