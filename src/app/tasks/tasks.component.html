@@ -1,1 +1,3 @@
-<p>tasks works!</p>
+<div>
+    <div class="task" *ngFor='let task of tasks'>{{task.payload.doc.data().description}} {{task.payload.doc.data().status}}</div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
+  tasks: Array<any>;
+
+  constructor(
+    public firebaseService: FirebaseService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.firebaseService.getTasks()
+      .then(result => {
+        this.tasks = result;
+      })
   }
 
 }
