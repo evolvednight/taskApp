@@ -1,8 +1,11 @@
 <header>
   <div>Extraordinary Todo List</div>
 </header>
-<router-outlet></router-outlet>
+
 <div class="footer">The task for {{ today | date: 'fullDate'}}</div>
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <nav>
   <ul>
     <li><a routerLink="/" routerLinkActive="active">Tasks icon</a></li>
