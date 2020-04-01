@@ -4,6 +4,8 @@
 <router-outlet></router-outlet>
 <div class="footer">The task for {{ today | date: 'fullDate'}}</div>
 <nav>
-  <a routerLink="/" routerLinkActive="active">Tasks icon</a>
-  <a routerLink="/summary" routerLinkActive="active">Summary icon</a>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active">Tasks icon</a></li>
+    <li><a routerLink="/summary" routerLinkActive="active">Summary icon</a></li>
+  </ul>
 </nav>

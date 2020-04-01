@@ -1,4 +1,9 @@
+.task-container {
+    padding: .5em 0 .5em 0;
+}
+
 .task {
-    padding: 1rem;
-    margin: 10px;
+    padding: 10px 0 10px 0;
+    border-bottom: .5px solid rgb(104, 101, 101);
+    font-size: medium;
 }

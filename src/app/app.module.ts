@@ -8,12 +8,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BuyComponent } from './buy/buy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    SummaryComponent
+    SummaryComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
