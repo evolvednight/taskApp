@@ -1,5 +1,7 @@
 <div>
-    <div class="task-container">
-        <div class="task" *ngFor='let task of tasks'>{{task.payload.doc.data().description}} {{task.payload.doc.data().status}}</div>
+    <div class="task-container"> 
+        <div *ngFor='let task of tasks'>
+            <div class="task" *ngIf='task.payload.doc.data().status'>{{task.payload.doc.data().description}} {{task.payload.doc.data().status}}</div>
+        </div>
     </div>
 </div>
