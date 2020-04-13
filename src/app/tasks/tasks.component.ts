@@ -31,7 +31,7 @@ export class TasksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.tasks = this.firebaseService.getTasks()
+    this.tasks = this.firebaseService.getTasks();
   }
 
 }
