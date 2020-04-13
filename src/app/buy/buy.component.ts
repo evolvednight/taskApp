@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseService }from '../services/firebase.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-buy',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buy.component.scss']
 })
 export class BuyComponent implements OnInit {
-
-  constructor() { }
+  buyList: Observable<any>;
 
   ngOnInit(): void {
+    this.buyList = this.firebaseService.getBuyList();
   }
 
+  constructor(
+    public firebaseService: FirebaseService,
+    private router: Router
+  ) { }
 }

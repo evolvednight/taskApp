@@ -1,7 +1,10 @@
 <div>
     <div class="task-container"> 
-        <div *ngFor='let task of tasks'>
-            <div class="task" *ngIf='task.payload.doc.data().status'>{{task.payload.doc.data().description}} {{task.payload.doc.data().status}}</div>
+        <div *ngFor='let task of tasks | async'>
+            <div class="task" *ngIf='task.status'>{{task.description}} , {{task.status}}</div>
+        </div>
+        <div class="row">
+            <input [(ngModel)] = "description" ref-newTask placeholder="add task" /><button (click)=addTask()>add</button>
         </div>
     </div>
 </div>

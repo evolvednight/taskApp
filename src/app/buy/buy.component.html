@@ -1,1 +1,5 @@
-<p>buy works!</p>
+<div>
+    <div *ngFor='let item of buyList | async'>
+        <div>{{item.item}} quantity {{item.quantity}}</div>
+    </div>
+</div>

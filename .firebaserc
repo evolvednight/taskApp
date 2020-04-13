@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todoapp-1b8a0": {
+      "hosting": {
+        "taskApp": [
+          "todoapp-1b8a0"
+        ]
+      }
+    }
+  }
+}
